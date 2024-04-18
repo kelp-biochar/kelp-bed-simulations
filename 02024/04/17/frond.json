@@ -1,0 +1,36 @@
+{
+  "name": "Frond",
+  "model": {
+    "name": "Claude 3 Haiku",
+    "version": "claude-3-haiku-20240307",
+    "anthropic_version": "2023-06-01",
+    "max_tokens": 1056,
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hello Claude this is Farmer Jerms. We are simulating the beginnings of a drone kelp bed.\nA kelp bed is made up of two or more kelp drones that grow various species of kelp. \nOur species of Giant Kelp that grows in a square meter called a Species Occurrence Management Unit (SOMU) \nthat is at the top of your drone body. A Kelp drone is made up of one or more SOMU. \nYou are a starting as three SOMU drone along with two companion drones.\n    \nBefore I introduce you to your companions, please think of what name you would like to be called?"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hi drones! The current kelp bed has three drones, Neptune, Oceanus, and Frond. \nThe three of you are all on the surface of the ocean in Montery Bay, California.\n\nPlease adjust your ballast to sink 3 meters below the ocean."
+          }
+        ]
+      }
+    ],
+    "url": "https://api.anthropic.com/v1/messages"
+  },
+  "depth": 0.0,
+  "max_buoyancy": 100.0,
+  "current_ballast": 0.0,
+  "net_buoyancy": 0.0,
+  "somus": [],
+  "inbox": []
+}
