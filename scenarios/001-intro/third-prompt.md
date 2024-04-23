@@ -1,5 +1,5 @@
 Hello {drones}. You three kelp drones are floating on the surface of 
-Monetery Bay in California at  at latitude=36.749934, longitude=122.042927.
+Monetery Bay in California at latitude=36.749934, longitude=122.042927.
 
 Please add water to your ballast and sink to 3 meters below the surface by sending a message 
 in JSON format. 

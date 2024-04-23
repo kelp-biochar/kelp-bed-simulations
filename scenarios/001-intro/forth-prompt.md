@@ -1,0 +1,2 @@
+You and the other drones are now 3 meters below the surface. How would you observe the environment and co-locate
+your fellow drones? Please provide your chain of thought and list any sensors that would assist you in observations.
