@@ -12,6 +12,8 @@ from kelp_drone.llms import (
     Gemini
 )
 
+from kelp_drone.somu import SpeciesOccurrenceManagementUnit as SOMU
+
 httpx_client = httpx.AsyncClient()
 
 chatgpt = ChatGPT(
@@ -32,3 +34,10 @@ gemini = Gemini(
     key=os.environ.get("GOOGLE_GEMINI_KEY"),
     post_function=httpx_client.post
 )
+
+def add_drone_somus(drone, number=3):
+    """Adds Species Occurrence Management Units to a Drone"""
+    for i in range(1, number+1):
+        somu = SOMU(name=f"{drone.name} {i}")
+        drone.add_somu(somu)
+

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3w.co/buffs.fusses.gracefully> a schema:Place ;
+    schema:latitude 3.674993e+01 ;
+    schema:longitude -1.220429e+02 .
+
+<https://www.ndbc.noaa.gov/rss/ndbc_obs_search.php?lat=36.74N&lon=122.04W&radius=10> a schema:Thing .
+
+<https://www.ndbc.noaa.gov/station_page.php?station=46092> a schema:Vehicle ;
+    schema:location [
+        a schema:Place ;
+        schema:latitude 3.6751e+01 ;
+        schema:longitude 3.6751e+01 .
+    ];
+    schema:description "Owned and maintained by MBARI Buoy" ;
+    schema:name "Station 46092 - MBM1" .
+
