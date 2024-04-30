@@ -11,8 +11,9 @@
     schema:location [
         a schema:Place ;
         schema:latitude 3.6751e+01 ;
-        schema:longitude 3.6751e+01 .
+        schema:longitude -1.22e+02
     ];
     schema:description "Owned and maintained by MBARI Buoy" ;
-    schema:name "Station 46092 - MBM1" .
+    schema:name "Station 46092 - MBM1" ;
+    schema:rss <https://www.ndbc.noaa.gov/data/latest_obs/46092.rss> .
 
