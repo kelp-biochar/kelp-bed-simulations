@@ -1,5 +1,6 @@
 import asyncio
 import datetime
+import logging.config
 import os
 import random
 import uuid
@@ -13,6 +14,45 @@ from kelp_drone.llms import (
 )
 
 from kelp_drone.somu import SpeciesOccurrenceManagementUnit as SOMU
+
+simulation_uuid = uuid.uuid4()
+
+LOGGING_CONFIG = {
+    "version": 1,
+    "handlers": {
+        "default": {
+            "class": "logging.FileHandler",
+            "formatter": "http",
+            "filename": f"{simulation_uuid}-simulation.log"
+        }
+    },
+    "formatters": {
+        "http": {
+            "format": "%(asctime)s %(levelname)s %(name)s - %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S",
+        }
+    },
+    'loggers': {
+        'httpx': {
+            'handlers': ['default'],
+            'level': 'WARN',
+        },
+        'httpcore': {
+            'handlers': ['default'],
+            'level': 'WARN',
+        },
+        'kelp_drone.llms': {
+            'handlers': ['default'],
+            'level': 'INFO'
+        },
+        'kelp_drone.drone': {
+            'handlers': ['default'],
+            'level': 'INFO'
+        }
+    }
+}
+
+logging.config.dictConfig(LOGGING_CONFIG)
 
 httpx_client = httpx.AsyncClient()
 
