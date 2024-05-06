@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@pyscript/core": "^0.4.27",
+    "pyodide": "^0.25.1"
+  }
+}

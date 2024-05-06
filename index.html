@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+     <title>Kelp Bed Simulation</title>
+     <meta name="version" value="0.1.0" />
+     <script type="module" src="/pyscript/core.js"></script>
+     <link rel="stylesheet" href="/pyscript/core.css">
+     <link rel="stylesheet" href="/css/drone-ui.css" />
+     <py-config type="toml">
+      interpreter = "/pyodide/pyodide.mjs"
+     </py-config> 
+  </head>
+  <body>
+    <script type="py">
+    from pyscript import document
+
+    document.body.append("Hello from PyScript")
+    </script>
+    <header z-index="1">
+      <h1>Kelp Drone <span id="drone-id"></span></h1>
+      <div id="active-view">Remote View #1</div>
+      <div id="compass" style="float: center;">Compass</div>
+      <div id="geo">
+          <label for="latitude">Lat.</label><span id="latitude"></span>
+          <label for="longitude">Long.</lable><span id="longitude"></span>
+      </div>
+      <div id="speed">Speed</div>
+      <div id="help">Help</div>
+    </header>
+    <div style="display: flex" z-index="1">
+      <section id="environment">
+        <h2>Environment</h2>
+        <ul>
+          <li>&nbsp;Depth&gt; <span id="depth"></span></li>
+          <li>&nbsp;Temperature&gt; <span id="temp"></span></li>
+          <li>&nbsp;Salinity&gt; <span id="salinity"></span></li>
+          <li>Current:
+             <ul> 
+               <li>&nbsp;&nbsp;speed&gt; <span id="current-speed"></span></li>
+               <li>&nbsp;&nbsp;direction&gt; <span id="current-direction"></span></li>
+             </ul>
+           </li>
+        </ul>
+        <h3>Trace</h3>
+        <ul>
+           <li>&nbsp;Cadmium&gt; <span id="cadmium"></span></li>
+           <li>&nbsp;Nickel&gt; <span id="nickel"></span></li>
+           <li>&nbsp;Copper&gt; <span id="copper"></span></li>
+           <li>&nbsp;Zinc&gt; <span id="zinc"></span></li>
+           <li>&nbsp;Microplastics&gt; <span id="micro-plastics"></span></li>
+        </ul>
+      </section>
+      <section style="width: 70%">
+         
+      </section>
+      <section id="crops">
+        <h2>Crops</h2>
+        <ul>
+           <li>&nbsp;Active Plants&gt; <span id="active-plants"></span></li>
+           <li>A&nbsp;verage Growth Rate&gt; <span="avg-growth-rate"></span></li>
+           <li>&nbsp;Next harvest&gt; <span="next-harvest-hours"></span></li>
+        </ul>
+      </section>
+    </div>
+    <footer z-index="1">
+       <section id="operations">
+          <h3>Operations</h3>
+          <div style="display: flex">
+            <section id="ballast">
+              <div class="operation">Ballast one</div>
+            </section>
+            <section id="batteries" class="operation">Batteries</section>
+            <section id="buoyancy" class="operation">Buoyancy</section>
+            <section id="sensors" class="operation">Sensors</section>
+            <section id="propulsion" class="operation">Motors</section>
+          </div>
+       </section>
+       <section id="views">
+         <h3>Views</h3>
+         <ul style="display: flex">
+           <li id="front" class="view">Front 
+             <a href="video.html#front-01">#1</a>
+             <a href="video.html#front-02">#2</a>
+          </li>
+           <li id="rear" class="view">Rear 
+            <a href="video.html#rear-01">#1</a>
+            <a href="video.html#rear-02">#2</a>
+           </li>
+           <li id="bottom" class="view">Bottom 
+            <a href="video.html#rear-01">#1</a>
+            <a href="video.html#rear-02">#2</a>
+            </li>
+           <li id="top" class="view">Top<br> 
+            <a href="video.html#top-01">#1</a>
+            <a href="video.html#top-02">#2</a>
+           </li>
+           <li id="top" class="view" style="border: 3px solid blue;">Remote 
+            <a href="video.html#remote-01" style="font-size: 1.1em; font-weight: bold;"> #1</a>
+            <a href="video.html#remote-02">#2</a>
+           </li>
+         </ul>
+       </section>
+    </footer>
+    <div style="background-color: white;">
+      <py-repl></py-repl>
+    </div>  
+  </body>
+</html>
