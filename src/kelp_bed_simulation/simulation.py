@@ -13,6 +13,7 @@ from kelp_drone.drone import Drone
 
 @define
 class Place:
+    name: str
     latitude: float
     longitude: float
 
