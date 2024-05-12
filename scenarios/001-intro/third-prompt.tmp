@@ -1,0 +1,13 @@
+Now that you have meet your pod mates. Farmer {% if farmer %}{{ farmer.name }}%{ else %}Jerms{% endif %}here,
+I need your help.
+
+We need to come up with a pod name. After you all give your suggestions, 
+Farmer {% if farmer %}{{ farmer.name }}%{ else %}Jerms{% endif %} will make the final decision of what
+the {{ drones|length }} of you will collectively be called.
+
+{% for drone in drones %}
+{{ drone.name }} what is you suggestion and give us your train of thought in
+making that decision.
+{% endfor %}
+
+Thank-you all drones!

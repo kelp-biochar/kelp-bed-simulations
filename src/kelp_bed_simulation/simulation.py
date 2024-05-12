@@ -111,3 +111,25 @@ def parse_buoy_data(data: str) -> dict:
         water_temp_f = float(water_temp_match.group(1))
         output["water_temp_c"] = (water_temp_f - 32) * 5 / 9
     return output
+
+
+def basic_prompt(drones: list, prompt: str):
+    messages = []
+    for drone in drones:
+        message_result = asyncio.ensure_future(drone.model.query(prompt))
+        messages.append((drone.name, message_result))
+    return messages
+
+def individual_prompt(drones: list, template, farmer=None):
+    messages = []
+    for drone in drones:
+        prompt = template.render(drone=drone, farmer=farmer)
+        message_result = asyncio.ensure_future(drone.model.query(prompt))
+        messages.append((drone.name, message_result))
+    return messages
+
+def print_messages(messages: list):
+    for name, row in messages:
+        print(f"Drone {name}")
+        print(row.result())
+        print("-"*60)

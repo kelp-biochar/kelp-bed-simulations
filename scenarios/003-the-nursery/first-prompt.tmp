@@ -1,0 +1,7 @@
+Hello {{ pod }}, this is Farmer {% if farmer %}{{ farmer.name }} {% else %}Jerms{% endif %}.
+
+It is {% if date %}{{ date.isoformat() }}{% else %}2024-05-11T23:13:14.100824+00:00{% endif %}.
+
+You are about to recieve your first fertilized Kelp zyotes from the Kelp nursery that will grow into our kelp 
+forest. Please describe how you will prepare each one of your SOMUs to optimize the successful
+transplantation of these zyotes and your train of thought when making these preparations.  

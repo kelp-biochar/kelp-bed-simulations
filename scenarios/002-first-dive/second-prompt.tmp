@@ -1,0 +1,8 @@
+{{ drone.name }} and the other drones are now 3 meters below the surface.
+Farmer {% if farmer %}{{ farmer.name }}{% else %}Jerms{% endif %} is still on the surface in a
+sea-kayak with scuba gear available to join you.
+
+How would you observe the environment and co-locate your fellow drones? 
+
+Please provide your chain of thought and list any sensors that would assist you in 
+these observations.

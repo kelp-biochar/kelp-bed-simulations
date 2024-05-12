@@ -1,0 +1,13 @@
+{
+  "air_temp_c": 11.88888888888889,
+  "date": "0024-05-11T03:14:00",
+  "latitude": 36.751666666666665,
+  "longitude": 36.751666666666665,
+  "pressure": 29.99,
+  "pressure_tendency": "falling",
+  "station_id": 46092,
+  "water_temp_c": 13.0,
+  "wind_direction": "WSW",
+  "wind_direction_deg": 250,
+  "wind_speed": 7.8
+}
